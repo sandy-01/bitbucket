@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <section>
+                <div *ngFor="let p of posts">{{p.post}} </div>
+            </section>
+            
+            <h3 class="txt txt-color">{{title}}</h3>
+            <ol>
+                <li>create 2 compoent for the successfull and warning for the given structure </li>
+                <li>create 2 compoent for the successfull and warning for the given structure </li>
+                <li>create 2 compoent for the successfull and warning for the given structure </li>
+            </ol>
+            <hr>
+            <label>UserName:</label>
+            <input type="text" class="form-contr   ol" [(ngModel)]= "UserName"> 
+            <p>{{UserName}}</p>
+            <button class="btn btn-primary" [disabled] = "UserName===''" (click) = "clickEmpty()"> Reset User</button>
+        </div>
+        
+        
+
+        <button class="btn btn-primary" (click)= "onToggleDetails()">Display details</button>
+        <p *ngIf= "showsecret">Secrete password: Tuna</p>
+        <div *ngFor = "let itemlog of log; let i = index"
+        [ngClass] = "{'white-text': i >= 5  }"
+        [ngStyle] = "{backgroundColor: i >= 5 ? 'blue' : 'transparent'}">
+        {{ itemlog }} sandeep is her</div>
+       
+        <app-server></app-server>  
+        
+    </div>
+
+    
+</div>
+
+
+
